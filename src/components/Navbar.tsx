@@ -72,14 +72,14 @@ export const Navbar = () => {
                   </span>
                   <button
                     onClick={handleSignOut}
-                    className="px-4 py-2 rounded-3xl bg-[#D62839] hover:bg-red-700 text-white font-bold transition-colors">
+                    className="px-4 py-2 rounded-3xl bg-white hover:bg-[#D62839] hover:text-white text-[#D62839] border-2 border-[#D62839] hover:border-[#D62839] font-bold transition-colors">
                     Sign Out
                   </button>
                 </div>
               ) : (
                 <button
                   onClick={showAuthModal}
-                  className="px-4 py-2 rounded-3xl bg-[#D62839] hover:bg-red-700 text-white font-bold transition-colors0">
+                  className="px-4 py-2 rounded-3xl bg-[#D62839] hover:bg-white hover:text-[#D62839] text-white border-2 border-white hover:border-[#D62839] font-bold transition-colors">
                   Sign In
                 </button>
               )}
