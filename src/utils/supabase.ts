@@ -1,12 +1,13 @@
-import { createClient } from '@supabase/supabase-js'
-import { Database } from '../types/database.types'
+import { createClient } from "@supabase/supabase-js";
+import { Database } from "./database.types";
 
-const supabaseUrl =
-  (typeof process !== 'undefined' ? process.env.NEXT_PUBLIC_SUPABASE_URL : undefined) ??
-  import.meta.env.VITE_SUPABASE_URL
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
-const supabaseAnonKey =
-  (typeof process !== 'undefined' ? process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY : undefined) ??
-  import.meta.env.VITE_SUPABASE_ANON_KEY
+if (!supabaseUrl || !supabaseAnonKey) {
+  throw new Error("Missing Supabase environment variables");
+}
 
-export const supabase = createClient<Database>(supabaseUrl as string, supabaseAnonKey as string)
+const supabase = createClient<Database>(supabaseUrl, supabaseAnonKey);
+
+export default supabase;
