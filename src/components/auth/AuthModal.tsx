@@ -78,24 +78,27 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
   return (
     <div
       className="fixed inset-0 bg-black/50 dark:bg-slate-900/75 flex items-center justify-center p-4 z-50 backdrop-blur-sm"
-      onClick={handleClose}>
+      onClick={handleClose}
+    >
       <div
-        className="bg-white dark:bg-slate-800 rounded-xl p-6 w-full max-w-md relative shadow-xl dark:shadow-slate-900/50"
-        onClick={(e) => e.stopPropagation()}>
+        className="bg-white rounded-3xl p-6 w-full max-w-md relative shadow-xl shadow-slate-900/50"
+        onClick={(e) => e.stopPropagation()}
+      >
         {showEventMessage && (
           <div className="mb-6 p-3 bg-blue-50 border border-blue-200 text-blue-600 rounded-lg dark:bg-blue-900/30 dark:border-blue-800 dark:text-blue-200 text-sm">
-            You need to be signed in to register for events
+            Sign in to register for events
           </div>
         )}
 
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+          <h2 className="text-2xl font-extrabold text-black">
             {isSignIn ? "Welcome Back" : "Create Account"}
           </h2>
           <button
             onClick={handleClose}
-            className="text-2xl font-light text-gray-500 hover:text-gray-700 dark:text-slate-300 dark:hover:text-slate-100 transition-colors p-1 hover:bg-gray-100 dark:hover:bg-slate-700 rounded-full"
-            aria-label="Close">
+            className="text-2xl text-white font-extrabold bg-[#D62839] hover:bg-red-700 transition-colors px-2 rounded-full hover"
+            aria-label="Close"
+          >
             ×
           </button>
         </div>
@@ -117,7 +120,8 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
             <div>
               <label
                 htmlFor="name"
-                className="block text-sm font-medium text-gray-700 dark:text-slate-200 mb-2">
+                className="block text-sm font-medium text-black mb-2"
+              >
                 Name
               </label>
               <input
@@ -125,7 +129,7 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
                 id="name"
                 value={formData.name}
                 onChange={handleInputChange}
-                className="w-full px-4 py-2.5 rounded-lg border border-gray-300 dark:border-slate-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-400/50 dark:bg-slate-700 dark:text-white transition-colors"
+                className="w-full px-4 py-2.5 rounded-2xl border border-black focus:border-[#4056f4] focus:ring-2 focus:ring-[#4056f4]  transition-colors"
                 required
               />
             </div>
@@ -134,7 +138,8 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
           <div>
             <label
               htmlFor="email"
-              className="block text-sm font-medium text-gray-700 dark:text-slate-200 mb-2">
+              className="block text-sm font-medium text-black mb-2"
+            >
               Email
             </label>
             <input
@@ -142,7 +147,7 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
               id="email"
               value={formData.email}
               onChange={handleInputChange}
-              className="w-full px-4 py-2.5 rounded-lg border border-gray-300 dark:border-slate-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-400/50 dark:bg-slate-700 dark:text-white transition-colors"
+              className="w-full px-4 py-2.5 rounded-2xl border border-black focus:border-[#4056f4] focus:ring-2 focus:ring-[#4056f4]  transition-colors"
               required
             />
           </div>
@@ -150,7 +155,8 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
           <div>
             <label
               htmlFor="password"
-              className="block text-sm font-medium text-gray-700 dark:text-slate-200 mb-2">
+              className="block text-sm font-medium text-black mb-2"
+            >
               Password
             </label>
             <input
@@ -158,28 +164,32 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
               id="password"
               value={formData.password}
               onChange={handleInputChange}
-              className="w-full px-4 py-2.5 rounded-lg border border-gray-300 dark:border-slate-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-400/50 dark:bg-slate-700 dark:text-white transition-colors"
+              className="w-full px-4 py-2.5 rounded-2xl border border-black focus:border-[#4056f4] focus:ring-2 focus:ring-[#4056f4]  transition-colors"
               required
             />
           </div>
 
-          <button
-            type="submit"
-            disabled={isLoading}
-            className="w-full py-3 px-4 rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-slate-600 dark:hover:bg-slate-700 text-white font-medium transition-colors focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-800 disabled:opacity-50 disabled:cursor-not-allowed">
-            {isLoading
-              ? "Processing..."
-              : isSignIn
-              ? "Sign In"
-              : "Create Account"}
-          </button>
+          <div className="flex justify-center">
+            <button
+              type="submit"
+              disabled={isLoading}
+              className="w-30 py-3 px-4 rounded-3xl bg-[#4056f4] hover:bg-[#3245c2] text-white font-extrabold transition-colors hover:ring-4 hover:ring-[#3245c2] hover:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {isLoading
+                ? "Processing..."
+                : isSignIn
+                ? "Sign In"
+                : "Create Account"}
+            </button>
+          </div>
 
           <div className="text-center text-sm">
             <button
               type="button"
               onClick={handleToggle}
               disabled={isLoading}
-              className="text-blue-600 hover:text-blue-500 dark:text-slate-300 dark:hover:text-slate-100 font-medium transition-colors disabled:opacity-50">
+              className="text-black hover:text-red-600 font-medium transition-colors disabled:opacity-50"
+            >
               {isSignIn
                 ? "New here? Create an account"
                 : "Already have an account? Sign in"}
