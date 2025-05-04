@@ -85,7 +85,7 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
         onClick={(e) => e.stopPropagation()}
       >
         {showEventMessage && (
-          <div className="mb-6 p-3 bg-blue-50 border border-blue-200 text-blue-600 rounded-lg dark:bg-blue-900/30 dark:border-blue-800 dark:text-blue-200 text-sm">
+          <div className="mb-6 p-3 bg-blue-50 border border-blue-200 text-blue-600 rounded-lg text-sm flex justify-center">
             Sign in to register for events
           </div>
         )}
@@ -104,13 +104,13 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
         </div>
 
         {message && (
-          <div className="mb-4 p-3 bg-blue-50 border border-blue-200 text-blue-600 rounded-lg dark:bg-blue-900/30 dark:border-blue-800 dark:text-blue-200">
+          <div className="mb-4 p-3 bg-blue-50 border border-blue-200 text-blue-600 rounded-lg">
             {message}
           </div>
         )}
 
         {error && (
-          <div className="mb-4 p-3 bg-red-50 border border-red-200 text-red-600 rounded-lg dark:bg-red-900/30 dark:border-red-800 dark:text-red-200">
+          <div className="mb-4 p-3 bg-red-50 border border-red-200 text-red-600 rounded-lg flex justify-center">
             {error}
           </div>
         )}
