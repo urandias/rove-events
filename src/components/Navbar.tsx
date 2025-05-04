@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { AuthModal } from "./auth/AuthModal";
-import Logo from "../logo.svg"
+import Logo from "../logo-white.svg"
 
 export const Navbar = () => {
   const {
@@ -37,7 +37,7 @@ export const Navbar = () => {
                 {user?.isStaff && (
                   <Link
                     to="/events/create"
-                    className="px-3 py-2 rounded-3xl font-bold border-2 bg-white border-[#06BA63] text-[#06BA63] hover:bg-[#06BA63] hover:text-white hover:border-white transition-colors">
+                    className="px-3 py-2 rounded-3xl font-bold border-2 bg-white border-[#06BA63] text-[#06BA63] hover:bg-[#06BA63] hover:text-white transition-colors">
                     Create Event
                   </Link>
                 )}
@@ -79,7 +79,7 @@ export const Navbar = () => {
               ) : (
                 <button
                   onClick={showAuthModal}
-                  className="px-4 py-2 rounded-3xl bg-[#D62839] hover:bg-white hover:text-[#D62839] text-white border-2 border-white hover:border-[#D62839] font-bold transition-colors">
+                  className="px-4 py-2 rounded-3xl bg-[#D62839] hover:bg-white hover:text-[#D62839] text-white font-bold transition-colors">
                   Sign In
                 </button>
               )}
