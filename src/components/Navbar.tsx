@@ -31,7 +31,7 @@ export const Navbar = () => {
               <div className="hidden md:flex items-center space-x-4">
                 <Link
                   to="/events"
-                  className="px-3 py-2 rounded-3xl font-bold bg-[#4056f4] text-white hover:bg-[#3245c2] transition-colors">
+                  className="px-3 py-2 rounded-3xl font-bold border-2 border-[#4056f4] bg-[#4056f4] text-white hover:bg-[#3245c2] transition-colors">
                   Events
                 </Link>
                 {user?.isStaff && (
