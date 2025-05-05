@@ -86,12 +86,12 @@ export const EditEvent = () => {
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-6">
-        <h1 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">
+      <div className="bg-white rounded-3xl border-8 border-[#06BA63] shadow-lg p-6">
+        <h1 className="text-3xl font-bold mb-6 text-black">
           Edit Event
         </h1>
         {error && (
-          <div className="mb-6 p-3 bg-red-50 border border-red-200 text-red-600 rounded-lg dark:bg-red-900/30 dark:border-red-800 dark:text-red-200">
+          <div className="mb-6 p-3 bg-red-50 border border-red-200 text-red-600 rounded-lg flex justify-center">
             {error}
           </div>
         )}
@@ -99,8 +99,8 @@ export const EditEvent = () => {
           <div>
             <label
               htmlFor="title"
-              className="block text-sm font-medium text-gray-700 dark:text-slate-200 mb-2">
-              Title *
+              className="block text-sm font-medium text-black mb-2">
+              Title
             </label>
             <input
               type="text"
@@ -109,13 +109,13 @@ export const EditEvent = () => {
               value={formData.title}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2.5 rounded-lg border border-gray-300 dark:border-slate-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-400/50 dark:bg-slate-700 dark:text-white transition-colors"
+              className="w-full px-4 py-2.5 rounded-2xl border border-black focus:border-[#4056f4] focus:ring-2 focus:ring-[#4056f4] transition-colors"
             />
           </div>
           <div>
             <label
               htmlFor="description"
-              className="block text-sm font-medium text-gray-700 dark:text-slate-200 mb-2">
+              className="block text-sm font-medium text-black mb-2">
               Description
             </label>
             <textarea
@@ -123,15 +123,15 @@ export const EditEvent = () => {
               name="description"
               value={formData.description}
               onChange={handleChange}
-              className="w-full px-4 py-2.5 rounded-lg border border-gray-300 dark:border-slate-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-400/50 dark:bg-slate-700 dark:text-white transition-colors h-32"
+              className="w-full px-4 py-2.5 rounded-2xl border border-black focus:border-[#4056f4] focus:ring-2 focus:ring-[#4056f4] transition-colors h-32"
             />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label
                 htmlFor="date"
-                className="block text-sm font-medium text-gray-700 dark:text-slate-200 mb-2">
-                Date *
+                className="block text-sm font-medium text-black mb-2">
+                Date
               </label>
               <input
                 type="date"
@@ -140,14 +140,14 @@ export const EditEvent = () => {
                 value={formData.date}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2.5 rounded-lg border border-gray-300 dark:border-slate-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-400/50 dark:bg-slate-700 dark:text-white transition-colors"
+                className="w-full px-4 py-2.5 rounded-2xl border border-black focus:border-[#4056f4] focus:ring-2 focus:ring-[#4056f4] transition-colors"
               />
             </div>
             <div>
               <label
                 htmlFor="time"
-                className="block text-sm font-medium text-gray-700 dark:text-slate-200 mb-2">
-                Time *
+                className="block text-sm font-medium text-black mb-2">
+                Time
               </label>
               <input
                 type="time"
@@ -156,15 +156,15 @@ export const EditEvent = () => {
                 value={formData.time}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2.5 rounded-lg border border-gray-300 dark:border-slate-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-400/50 dark:bg-slate-700 dark:text-white transition-colors"
+                className="w-full px-4 py-2.5 rounded-2xl border border-black focus:border-[#4056f4] focus:ring-2 focus:ring-[#4056f4] transition-colors"
               />
             </div>
           </div>
           <div>
             <label
               htmlFor="location"
-              className="block text-sm font-medium text-gray-700 dark:text-slate-200 mb-2">
-              Location *
+              className="block text-sm font-medium text-black mb-2">
+              Location
             </label>
             <input
               type="text"
@@ -173,13 +173,13 @@ export const EditEvent = () => {
               value={formData.location}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2.5 rounded-lg border border-gray-300 dark:border-slate-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-400/50 dark:bg-slate-700 dark:text-white transition-colors"
+              className="w-full px-4 py-2.5 rounded-2xl border border-black focus:border-[#4056f4] focus:ring-2 focus:ring-[#4056f4] transition-colors"
             />
           </div>
           <div>
             <label
               htmlFor="maxAttendees"
-              className="block text-sm font-medium text-gray-700 dark:text-slate-200 mb-2">
+              className="block text-sm font-medium text-black mb-2">
               Maximum Attendees (optional)
             </label>
             <input
@@ -189,13 +189,13 @@ export const EditEvent = () => {
               value={formData.maxAttendees}
               onChange={handleChange}
               min="1"
-              className="w-full px-4 py-2.5 rounded-lg border border-gray-300 dark:border-slate-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-400/50 dark:bg-slate-700 dark:text-white transition-colors"
+              className="w-full px-4 py-2.5 rounded-2xl border border-black focus:border-[#4056f4] focus:ring-2 focus:ring-[#4056f4] transition-colors"
             />
           </div>
           <div>
             <label
               htmlFor="imageUrl"
-              className="block text-sm font-medium text-gray-700 dark:text-slate-200 mb-2">
+              className="block text-sm font-medium text-black mb-2">
               Image URL (optional)
             </label>
             <input
@@ -204,13 +204,13 @@ export const EditEvent = () => {
               name="imageUrl"
               value={formData.imageUrl}
               onChange={handleChange}
-              className="w-full px-4 py-2.5 rounded-lg border border-gray-300 dark:border-slate-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-400/50 dark:bg-slate-700 dark:text-white transition-colors"
+              className="w-full px-4 py-2.5 rounded-2xl border border-black focus:border-[#4056f4] focus:ring-2 focus:ring-[#4056f4] transition-colors"
             />
           </div>
           <div>
             <label
               htmlFor="category"
-              className="block text-sm font-medium text-gray-700 dark:text-slate-200 mb-2">
+              className="block text-sm font-medium text-black mb-2">
               Category (optional)
             </label>
             <select
@@ -218,18 +218,27 @@ export const EditEvent = () => {
               name="category"
               value={formData.category}
               onChange={handleChange}
-              className="w-full px-4 py-2.5 rounded-lg border border-gray-300 dark:border-slate-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-400/50 dark:bg-slate-700 dark:text-white transition-colors">
+              className="w-full px-4 py-2.5 rounded-2xl border border-black focus:border-[#4056f4] focus:ring-2 focus:ring-[#4056f4] transition-colors">
               <option value="">Select a category</option>
               <option value="Tech">Tech</option>
               <option value="Art">Art</option>
               <option value="Sports">Sports</option>
               <option value="Social">Social</option>
+              <option value="Music">Music</option>
+              <option value="Food & Drink">Food & Drink</option>
+              <option value="Business & Networking">Business & Networking</option>
+              <option value="Education">Education</option>
+              <option value="Health & Wellness">Health & Wellness</option>
+              <option value="Community">Community</option>
+              <option value="Entertainment">Entertainment</option>
+              <option value="Outdoors & Adventure">Outdoors & Adventure</option>
+              <option value="Charity & Causes">Charity & Causes</option>
             </select>
           </div>
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+            className="w-full py-3 px-6 bg-[#06BA63] hover:bg-green-600 text-white font-semibold rounded-3xl transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
             {isLoading ? "Updating Event..." : "Update Event"}
           </button>
         </form>
