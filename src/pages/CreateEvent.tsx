@@ -72,7 +72,7 @@ export const CreateEvent = () => {
         </h1>
 
         {error && (
-          <div className="mb-6 p-3 bg-red-50 border border-red-200 text-red-600 rounded-lg dark:bg-red-900/30 dark:border-red-800 dark:text-red-200">
+          <div className="mb-6 p-3 bg-red-50 border border-red-200 text-red-600 rounded-lg flex justify content">
             {error}
           </div>
         )}
