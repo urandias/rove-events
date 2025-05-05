@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { AuthModal } from "./auth/AuthModal";
-import Logo from "../logo-white.svg"
+import Logo from "../../public/logo-white.svg"
 
 export const Navbar = () => {
   const {
