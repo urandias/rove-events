@@ -66,7 +66,7 @@ export const CreateEvent = () => {
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className="bg-white rounded-xl shadow-lg p-6">
+      <div className="bg-white rounded-3xl border-8 border-[#06BA63] shadow-lg p-6">
         <h1 className="text-3xl font-extrabold mb-6 text-black">
           Create New Event
         </h1>
@@ -228,7 +228,7 @@ export const CreateEvent = () => {
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+            className="w-full py-3 px-6 bg-[#06BA63] hover:bg-green-600 text-white font-semibold rounded-3xl transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
             {isLoading ? "Creating Event..." : "Create Event"}
           </button>
         </form>
