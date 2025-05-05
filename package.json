@@ -8,9 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "tailwind-init": "tailwindcss init -p",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "tailwind-init": "tailwindcss init -p"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.49.4",
@@ -29,7 +27,6 @@
     "eslint": "^9.22.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
-    "gh-pages": "^6.3.0",
     "globals": "^16.0.0",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.5",
@@ -49,5 +46,5 @@
   "bugs": {
     "url": "https://github.com/urandias/rove-events/issues"
   },
-  "homepage": "https://urandias.github.io/rove-events"
+  "homepage": "https://github.com/urandias/rove-events#readme"
 }
