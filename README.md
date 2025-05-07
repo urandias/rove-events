@@ -28,6 +28,7 @@ An events platform that allows users to discover, register and manage events. Al
 To run this project, you will need to add the following environment variables to your .env file:
 
 `VITE_SUPABASE_URL`
+
 `VITE_SUPABASE_ANON_KEY`
 
 
